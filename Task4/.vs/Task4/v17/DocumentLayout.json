@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Programs\\C\u002B\u002B\\CPP-OOP\\Task4\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{6A0044EB-9986-486B-AC08-6356A764DD77}|Task4\\Task4.vcxproj|D:\\Programs\\C\u002B\u002B\\CPP-OOP\\Task4\\Task4\\Task4.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{6A0044EB-9986-486B-AC08-6356A764DD77}|Task4\\Task4.vcxproj|solutionrelative:Task4\\Task4.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Task4.cpp",
+              "DocumentMoniker": "D:\\Programs\\C\u002B\u002B\\CPP-OOP\\Task4\\Task4\\Task4.cpp",
+              "RelativeDocumentMoniker": "Task4\\Task4.cpp",
+              "ToolTip": "D:\\Programs\\C\u002B\u002B\\CPP-OOP\\Task4\\Task4\\Task4.cpp",
+              "RelativeToolTip": "Task4\\Task4.cpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAXAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-03-13T18:12:03.259Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
