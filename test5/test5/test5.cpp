@@ -1,20 +1,50 @@
-// test5.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
 
 #include <iostream>
+#include <fstream>
+struct product {
+	int barcode=0;
+	char address[50] = "Unknown";
+	unsigned int quantity = 0;
+	double price = 0.0;
+	product() = default;
+	product(int barcode,const char* address,int quantity,double price)
+	{
+		this->barcode = barcode;
+		std::strcpy(this->address, address);
+		this->quantity = quantity;
+		this->price = price;
+	}
+	void readproduct(std::ifstream ifs);
+};
+struct shop {
+	char name[30]= "Unknown;";
+	char address[50]="Unknown;";
+	product products[100];
+	int currentProducts = 0;
+	double money=0.0;
+	shop() = default;
+	shop(const char* name, const char* address, double money)
+	{
+		std::strcpy(this->name, name);
+		std::strcpy(this->address, address);
+		this->money = money;
+	}
+	void loadProduct(product& pr);
+};
+void shop::loadProduct(product& pr)
+{
+	if (currentProducts < 100)
+	{
+		this->products[currentProducts] = pr;
+	}
+	else {
+		std::cout << "No Space!"<<std::endl;
+	}
+
+		
+}
 
 int main()
 {
-    std::cout << "Hello World!\n";
+   
 }
-
-// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
-// Debug program: F5 or Debug > Start Debugging menu
-
-// Tips for Getting Started: 
-//   1. Use the Solution Explorer window to add/manage files
-//   2. Use the Team Explorer window to connect to source control
-//   3. Use the Output window to see build output and other messages
-//   4. Use the Error List window to view errors
-//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
-//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
