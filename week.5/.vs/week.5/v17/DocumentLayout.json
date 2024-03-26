@@ -3,6 +3,14 @@
   "WorkspaceRootPath": "D:\\Programs\\C\u002B\u002B\\CPP-OOP\\week.5\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{389CF5B7-047C-41B5-B8D8-71672CE1C865}|week.5\\week.5.vcxproj|D:\\Programs\\C\u002B\u002B\\CPP-OOP\\week.5\\week.5\\Client.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{389CF5B7-047C-41B5-B8D8-71672CE1C865}|week.5\\week.5.vcxproj|solutionrelative:week.5\\Client.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{389CF5B7-047C-41B5-B8D8-71672CE1C865}|week.5\\week.5.vcxproj|D:\\Programs\\C\u002B\u002B\\CPP-OOP\\week.5\\week.5\\Service.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{389CF5B7-047C-41B5-B8D8-71672CE1C865}|week.5\\week.5.vcxproj|solutionrelative:week.5\\Service.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{389CF5B7-047C-41B5-B8D8-71672CE1C865}|week.5\\week.5.vcxproj|D:\\Programs\\C\u002B\u002B\\CPP-OOP\\week.5\\week.5\\week.5.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{389CF5B7-047C-41B5-B8D8-71672CE1C865}|week.5\\week.5.vcxproj|solutionrelative:week.5\\week.5.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
@@ -19,12 +27,38 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Client.h",
+              "DocumentMoniker": "D:\\Programs\\C\u002B\u002B\\CPP-OOP\\week.5\\week.5\\Client.h",
+              "RelativeDocumentMoniker": "week.5\\Client.h",
+              "ToolTip": "D:\\Programs\\C\u002B\u002B\\CPP-OOP\\week.5\\week.5\\Client.h",
+              "RelativeToolTip": "week.5\\Client.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAASAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-03-26T22:25:52.834Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Service.h",
+              "DocumentMoniker": "D:\\Programs\\C\u002B\u002B\\CPP-OOP\\week.5\\week.5\\Service.h",
+              "RelativeDocumentMoniker": "week.5\\Service.h",
+              "ToolTip": "D:\\Programs\\C\u002B\u002B\\CPP-OOP\\week.5\\week.5\\Service.h",
+              "RelativeToolTip": "week.5\\Service.h",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-03-26T22:25:48.912Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "week.5.cpp",
               "DocumentMoniker": "D:\\Programs\\C\u002B\u002B\\CPP-OOP\\week.5\\week.5\\week.5.cpp",
               "RelativeDocumentMoniker": "week.5\\week.5.cpp",
               "ToolTip": "D:\\Programs\\C\u002B\u002B\\CPP-OOP\\week.5\\week.5\\week.5.cpp",
               "RelativeToolTip": "week.5\\week.5.cpp",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAeAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAUAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-03-26T15:00:20.545Z",
               "EditorCaption": ""
