@@ -1,0 +1,7 @@
+﻿  Set.cpp
+D:\Programs\C++\CPP-OOP\week6_1\week6_1\Set.cpp(34,3): error C2561: 'Set::operator =': function must return a value
+  D:\Programs\C++\CPP-OOP\week6_1\week6_1\Set.cpp(31,11):
+  see declaration of 'Set::operator ='
+  
+  week6_1.cpp
+  Generating Code...
