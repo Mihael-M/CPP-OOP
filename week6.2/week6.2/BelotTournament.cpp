@@ -87,7 +87,7 @@ void BelotTournament::tournamentWinner(Team* teams,unsigned& size)
 
 		currIndex += 2;
 	}
-	std::cout << "salam"<< std::endl;
+	
 	tournamentWinner(winners, realSize);
 	delete[] winners;
 }
