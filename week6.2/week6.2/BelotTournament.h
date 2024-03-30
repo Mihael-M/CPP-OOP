@@ -15,7 +15,9 @@ public:
 	BelotTournament& operator=(const BelotTournament& other);
 	~BelotTournament();
 	void setBelotTournament(const Team* teams, unsigned currentSize);
-	void tournamentWinner(Team* teams,unsigned& size);
+	void tournamentWinner(Team* teams);
+	
+	void startTournament(Team* teams);
 	unsigned gatheredMoney();
 	void giveWinner();
 	int findWinner();

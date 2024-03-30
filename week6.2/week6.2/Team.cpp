@@ -29,12 +29,8 @@ void Team::addPoints(unsigned points)
 	this->points += points;
 }
 bool Team::winRound() {
-	if (this->points >= WINNER_POINTS)
-	{
-		wins++;
-		return true;
-	}
-	return false;
+
+	return this->points >= WINNER_POINTS;
 }
 
 bool Team::getWinnerInDuel() const
@@ -49,43 +45,85 @@ const unsigned Team::getPoints() const
 	return points;
 }
 
-void round(Team& first, Team& second)
+void Team::returnPoints()
 {
-	while (first.winRound() || second.winRound())
-	{
-		unsigned points1;
-		std::cout << "Add points-Team 1: ";
-
-		std::cin >> points1;
-
-		first.addPoints(points1);
-		unsigned points2;
-		std::cout << "Add points-Team 2: ";
-
-		std::cin >> points2;
-
-		second.addPoints(points2);
-	}
+	points = 0;
 }
 
-Team duel(Team& first,Team& second)
+void round(Team& first, Team& second)
 {
 	while (true)
 	{
+
+		unsigned points1;
+		std::cout << "Add points-Team 1: ";
+		std::cin >> points1;
+		first.addPoints(points1);
+		std::cout << "Team 1 - points: " << first.getPoints() << std::endl;
+
+
+
+
+		unsigned points2;
+		std::cout << "Add points-Team 2: ";
+		std::cin >> points2;
+		second.addPoints(points2);
+		std::cout << "Team 2 - points: " << first.getPoints() << std::endl;
+		if (first.winRound())
+		{
+			first.wins++;
+			first.returnPoints();
+			second.returnPoints();
+			std::cout << "Team 1 Won " << std::endl;
+			return;
+		}
+
+		else if (second.winRound())
+		{
+			second.wins++;
+			first.returnPoints();
+			second.returnPoints();
+			std::cout << "Team 2 Won " << std::endl;
+			return;
+		}
+
+	}
+}
+
+void duel(Team& first, Team& second)
+{
+	unsigned roundCounter = 1;
+	while (true)
+	{
+		std::cout << "Round: " << roundCounter << std::endl;
+		std::cout << std::endl;
+
 		round(first, second);
+		std::cout << std::endl;
+		std::cout << "Team 1 wins: " << first.wins << std::endl;
+		std::cout << std::endl;
+		std::cout << "Team 2 wins: " << second.wins << std::endl;
+		std::cout << std::endl;
+		roundCounter++;
 		if (first.wins == DUEL_WIN)
 		{
+
 			second.isWinnerInDuel = false;
-			return first;
+			std::cout << "Team 1 Won the Duel" << std::endl;
+			return;
 		}
-			
+
 
 		else if (second.wins == DUEL_WIN)
 		{
-			first.isWinnerInDuel = false;
-			return second;
-		}
-			
-	}
 
+			first.isWinnerInDuel = false;
+			std::cout << "Team 2 Won the Duel" << std::endl;
+			return;
+		}
+
+	};
 }
+
+
+

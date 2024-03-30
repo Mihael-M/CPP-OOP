@@ -18,9 +18,14 @@ int main()
 	Team besha(team2);
 
 	Team teams[] = { kesha,besha };
-
+	
 	BelotTournament tournament(teams, 2);
-	tournament.tournamentWinner(teams,size);
-	std::cout << tournament.gatheredMoney() << std::endl;
+	
+	tournament.tournamentWinner(teams);
+	
+	std::cout << std::endl;
+	std::cout << kesha.getWinnerInDuel() << std::endl;
+	std::cout << besha.getWinnerInDuel()<<std::endl;
+	//std::cout << tournament.findWinner();
 }
 

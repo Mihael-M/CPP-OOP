@@ -20,6 +20,8 @@ public:
 	bool winRound();
 	bool getWinnerInDuel()const ;
 	const unsigned getPoints()const;
+	void returnPoints();
+	
 	friend void round(Team& first, Team& second);
-	friend Team duel(Team& first,Team& second);
+	friend void duel(Team& first,Team& second);
 };

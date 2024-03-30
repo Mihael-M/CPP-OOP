@@ -45,15 +45,7 @@ void BelotTournament::setBelotTournament(const Team* teams, unsigned currentSize
 {
 	if (!teams || this->teams == teams)
 	{
-		if (teams == nullptr) {
-			std::cout << "Kolbas";
-		}
-		else if (this->teams == teams) {
-			std::cout << "Arbanas";
-		}
-		else {
-			std::cout << "Kabanas";
-		}
+		
 		std::cout << "error";
 		return;
 	}
@@ -69,28 +61,49 @@ void BelotTournament::setBelotTournament(const Team* teams, unsigned currentSize
 	this->currentSize = currentSize;
 }
 
-void BelotTournament::tournamentWinner(Team* teams,unsigned& size)
-
+void BelotTournament::tournamentWinner(Team* teams)
 {
-	unsigned realSize = size/ 2;
-	if (realSize == 1)
-		return;
-	Team* winners = new Team[realSize];
-	int index = 0;
 	
-	size_t currIndex = 0;
-	while (currIndex <  currentSize) {
-		if (currIndex + 1 < size) {
-			winners[index] = duel(teams[currIndex], teams[currIndex + 1]);
-			index++;
-		}
+	int count = 0;
+	for (size_t i = 0; i < currentSize; i++)
+	{
+		count++;
+		if (teams[i].getWinnerInDuel())
+		{
+			
+			for (size_t j = i + 1; j < currentSize; j++)
+			{
+				if (teams[j].getWinnerInDuel()) {
 
-		currIndex += 2;
+					duel(teams[i], teams[j]);
+					i++;
+					break;
+				}
+			}
+		}
 	}
 	
-	tournamentWinner(winners, realSize);
-	delete[] winners;
+	
+	if (count == currentSize - 1);
+	return;
+	
+	
+	this->tournamentWinner(teams);	
 }
+
+void BelotTournament::startTournament(Team* teams) 
+{
+	std::srand(std::time(nullptr));
+	for (unsigned i = 0; i < currentSize; ++i) {
+		unsigned j = std::rand() % currentSize;
+		std::swap(teams[i], teams[j]);
+	}
+	
+	tournamentWinner(teams);
+	
+	std::cout << "Total donation collected: $ " << gatheredMoney() << std::endl;
+}
+
 
 unsigned BelotTournament::gatheredMoney()
 {
@@ -143,7 +156,7 @@ void BelotTournament::giveWinner()
 
 int BelotTournament::findWinner()
 {
-	for (size_t i = 0; i < currentSize; i++)
+	for (int i = 0; i < currentSize; i++)
 	{
 
 		if (teams[i].getWinnerInDuel()) {
