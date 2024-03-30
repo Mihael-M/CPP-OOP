@@ -13,6 +13,7 @@ public:
 	Movie() = default;
 	Movie(const char* name, const char* director, int time, uint8_t genres);
 	~Movie();
+	Movie(const Movie& movie);
 	Movie& operator=(const Movie& other);
 		
 	

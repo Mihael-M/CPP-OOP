@@ -14,6 +14,16 @@ Movie::~Movie()
 	delete[] director;
 }
 
+Movie::Movie(const Movie& other)
+{
+	name = new char[strlen(other.name) + 1];
+	strcpy_s(name, strlen(other.name) + 1, other.name);
+	director = new char[strlen(other.director) + 1];
+	strcpy_s(director, strlen(other.director) + 1, other.director);
+	time = other.time;
+	genres = other.genres;
+}
+
 Movie& Movie::operator=(const Movie& other)
 {
 	if (this != &other) { // Check for self-assignment

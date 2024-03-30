@@ -7,7 +7,7 @@ MovieSchedule::MovieSchedule(Movie* movies, int currentSize)
 		this->movies[i] = movies[i];
 	}
 	setSize(currentSize);
-	std::cout << "created" << std::endl;
+	
 }
 
 int MovieSchedule::getSize() const
