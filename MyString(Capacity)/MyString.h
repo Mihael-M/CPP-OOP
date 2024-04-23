@@ -11,7 +11,8 @@ private:
 	void free();
 	explicit MyString(size_t stringSize);
 	void resize(unsigned newCapacity);
-
+	//move:
+	void move(MyString&& other);
 public:
 
 	MyString();
@@ -31,6 +32,11 @@ public:
 	MyString& operator+=(const MyString& other);
 	friend std::istream& operator>>(std::istream& is, MyString& str);
 	friend MyString operator+(const MyString& lhs, const MyString& rhs);
+
+	//moveSemantics:
+
+	MyString(MyString&& other);
+	MyString& operator=(MyString&& other);
 };
 std::ostream& operator<<(std::ostream& os, const MyString& str);
 bool operator==(const MyString& lhs, const MyString& rhs);

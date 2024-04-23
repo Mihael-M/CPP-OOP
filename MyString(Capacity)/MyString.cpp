@@ -32,11 +32,22 @@ void MyString::free()
 
 void MyString::resize(unsigned newCapacity)
 {
+    
     char* newData = new char[newCapacity + 1];
     strcpy(newData, data);
     free();
     data = newData;
     capacity = newCapacity;
+}
+
+void MyString::move(MyString&& other)
+{
+    this->data = other.data;
+    other.data = nullptr;
+    this->size = other.size;
+    other.size = 0;
+    this->capacity = other.capacity;
+    other.capacity = 0;
 }
 
 MyString::MyString() : MyString("") {}
@@ -88,7 +99,7 @@ size_t MyString::getSize()
 
 size_t MyString::getCapacity()
 {
-    return capacity;
+    return capacity - 1;
 }
 
 const char* MyString::c_str() const
@@ -121,6 +132,22 @@ MyString& MyString::operator+=(const MyString& other)
 
 
 
+}
+
+MyString::MyString(MyString&& other)
+{
+    move(std::move(other));
+}
+
+MyString& MyString::operator=(MyString&& other)
+{   
+    if (this != &other)
+    {  
+        free();
+        move(std::move(other));
+    }
+    return *this;
+  
 }
 
 std::istream& operator>>(std::istream& is, MyString& str)
