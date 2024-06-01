@@ -35,6 +35,8 @@ Function& Function::operator=(Function&& other){
 }
 
 
+
+
 void Function::move(Function&& other){
     this->points = other.points;
     other.points = nullptr;
