@@ -46,7 +46,7 @@ public:
     
     unsigned get_health() const;
     
-    virtual void print_player(std::ostream& os) const;
+    virtual void print_player(std::ostream& os) const = 0;
     
     bool are_close(const Player& other) const;
     
