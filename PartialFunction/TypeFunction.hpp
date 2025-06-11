@@ -118,7 +118,12 @@ void TypeFunction<T>::resize(size_t newCap){
     PartialFunction<T>** tempArr = new PartialFunction<T>*[newCap];
     for(int i = 0;i<functionsCount;i++)
         tempArr[i] = this->functions[i]->clone();
-    delete[] tempArr;
+    
+    for (int i = 0; i < functionsCount; i++) {
+        delete this->functions[i];
+    }
+    delete[] this->functions;
+
     this->functions = tempArr;
     this->capacity = newCap;
 }
